@@ -1,0 +1,15 @@
+{
+  "name": "vaultp",
+  "version": "0.0.1",
+  "description": "Switch Vault profile",
+  "main": "index.js",
+  "author": "rick ",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  },
+  "bin": {
+    "_awsp_prompt": "./index.js",
+    "_awsp": "./run.sh"
+  }
+}
