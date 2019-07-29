@@ -9,7 +9,10 @@
     "inquirer": "^6.5.0"
   },
   "bin": {
-    "_awsp_prompt": "./index.js",
-    "_awsp": "./run.sh"
+    "_vaultp": "./run.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pchikoian/vaultp"
   }
 }

@@ -38,3 +38,7 @@ alias vaultp="source _vaultp"
 ```sh
 vaultp
 ```
+
+## Reference
+
+* [awsp](https://github.com/johnnyopao/awsp)
