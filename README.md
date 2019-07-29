@@ -39,6 +39,19 @@ alias vaultp="source _vaultp"
 vaultp
 ```
 
+## Shell prompt
+```sh
+function aws_prof {
+  local profile="${AWS_PROFILE:=default}"
+
+  echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+}
+```
+
+```sh
+PROMPT='OTHER_PROMPT_STUFF $(aws_prof)'
+```
+
 ## Reference
 
 * [awsp](https://github.com/johnnyopao/awsp)

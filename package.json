@@ -1,6 +1,6 @@
 {
   "name": "vaultp",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Switch Vault profile",
   "main": "index.js",
   "author": "rick ",
@@ -9,6 +9,7 @@
     "inquirer": "^6.5.0"
   },
   "bin": {
+    "_vaultp_prompt": "index.js",
     "_vaultp": "./run.sh"
   },
   "repository": {
