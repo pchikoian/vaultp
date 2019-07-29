@@ -41,17 +41,17 @@ vaultp
 
 ## Shell prompt
 ```sh
-function aws_prof {
-  local profile="${AWS_PROFILE:=default}"
+function vault_prompt {
+  local profile="${VAULT_PROFILE:=default}"
 
-  echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+  echo "%{$fg_bold[blue]%}vault:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
 }
 ```
 
 ```sh
-PROMPT='OTHER_PROMPT_STUFF $(aws_prof)'
+PROMPT='OTHER_PROMPT_STUFF $(vault_prompt)'
 ```
 
-## Reference
+## Authors
 
-* [awsp](https://github.com/johnnyopao/awsp)
+Created by [rick lin](https://github.com/pchikoian) with inspiration from [awsp](https://github.com/johnnyopao/awsp)

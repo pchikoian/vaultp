@@ -1,6 +1,6 @@
 {
   "name": "vaultp",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Switch Vault profile",
   "main": "index.js",
   "author": "rick ",
@@ -15,5 +15,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pchikoian/vaultp"
-  }
+  },
+  "keywords": [
+    "vault"
+  ]
 }
