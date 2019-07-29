@@ -4,11 +4,9 @@ Switch Vault profile easily
 
 ## Preparation
 
-Setup your profile in `~/.vault/config`
+Setup your profile in `~/.vault/config` (create folder if not exists)
 
-(create folder if not exists)
-
-config example
+config example:
 
 ```
 {
