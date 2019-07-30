@@ -1,6 +1,6 @@
 {
   "name": "vaultp",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Switch Vault profile",
   "main": "index.js",
   "author": "rick ",
