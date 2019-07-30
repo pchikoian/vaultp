@@ -18,17 +18,23 @@ const promptProfileChoice = (data) => {
     return;
   }
 
-  const profileChoice = [
-    {
-      type: 'list',
-      name: 'profile',
-      message: 'Choose a profile',
-      choices: profiles,
-      default: process.env.AWS_PROFILE || defaultProfileChoice
-    }
-  ];
+  if (process.argv[2]) {
+    const choice = { 'profile': process.argv[2] }
+    return Promise.all([choice, data])
+  }
+  else {
+    const profileChoice = [
+      {
+        type: 'list',
+        name: 'profile',
+        message: 'Choose a profile',
+        choices: profiles,
+        default: process.env.AWS_PROFILE || defaultProfileChoice
+      }
+    ];
 
-  return Promise.all([inquirer.prompt(profileChoice), data]);
+    return Promise.all([inquirer.prompt(profileChoice), data]);
+  }
 }
 
 const readProfiles = () => {
@@ -46,6 +52,10 @@ const readProfiles = () => {
 const writeToConfig = (result) => {
   const profileChoice = result[0]['profile'];
   const profiles = result[1];
+  if (!profiles[profileChoice]) {
+    console.log(`Profile [${profileChoice}] not found.`)
+    return
+  }
   const profileValue = `${profileChoice} ${profiles[profileChoice]['address'].trim()} ${profiles[profileChoice]['token'].trim()}`;
 
   return new Promise((resolve, reject) => {

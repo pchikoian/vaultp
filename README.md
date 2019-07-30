@@ -37,6 +37,12 @@ alias vaultp="source _vaultp"
 vaultp
 ```
 
+or
+
+```sh
+vaultp default
+```
+
 ## Shell prompt
 ```sh
 function vault_prompt {

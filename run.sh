@@ -1,6 +1,6 @@
 #!/bin/sh
 
-_vaultp_prompt
+_vaultp_prompt $1
 
 read -r VAULT_PROFILE VAULT_ADDR VAULT_TOKEN <<< $(cat ~/.vaultp)
 
