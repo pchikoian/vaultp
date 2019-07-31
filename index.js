@@ -53,11 +53,12 @@ const writeToConfig = (result) => {
   const profileChoice = result[0]['profile'];
   const profiles = result[1];
   if (!profiles[profileChoice]) {
-    console.log(`Profile [${profileChoice}] not found.`)
+    console.log(`Profile [${profileChoice}] not found.`);
     return
   }
   const profileValue = `${profileChoice} ${profiles[profileChoice]['address'].trim()} ${profiles[profileChoice]['token'].trim()}`;
 
+  console.log(`Change profile [${profileChoice}]`);
   return new Promise((resolve, reject) => {
     fs.writeFile(`${homeDir}/.vaultp`, profileValue, { flag: 'w' }, function (err) {
       if (err) {
